@@ -196,4 +196,3 @@ Contributors will be:
 ---
 
 **Happy coding! Let's make GitHub Wrapped awesome together! 🚀**
-

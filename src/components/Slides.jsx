@@ -1,5 +1,4 @@
-import { KeyframeResolver, motion } from 'framer-motion';
-import { borderBottomLeftRadius } from 'html2canvas/dist/types/css/property-descriptors/border-radius';
+import { motion } from 'framer-motion';
 
 export const SlideIntro = ({ user }) => {
   return (

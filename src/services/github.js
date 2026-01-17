@@ -1,8 +1,5 @@
 // GitHub API service for fetching user data
 
-import { feMerge } from "framer-motion/client";
-import { TypedEventEmitter } from "mongodb";
-
 const GITHUB_API_BASE = 'https://api.github.com';
 
 export const fetchGitHubUser = async (username) => {

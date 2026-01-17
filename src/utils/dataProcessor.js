@@ -151,7 +151,7 @@ const generatePersonality = (topLanguages, eventTypes, totalCommits) => {
   const issueCount = eventTypes['IssuesEvent'] || 0;
   
   if (prCount > issueCount && prCount > 10) {
-    personalities.push('🔀 PR Maestro');  
+    personalities.push('🔀 PR Maestro');
   } else if (issueCount > 10) {
     personalities.push('🐛 Bug Hunter');
   }

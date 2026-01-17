@@ -2,8 +2,6 @@
 
 > **A beautiful, interactive web app that generates a Spotify Wrapped-style visualization of your GitHub activity.**
 
-Perfect for Hack Club challenges and showcasing your coding journey! ✨
-
 ![GitHub Wrapped Demo](https://img.shields.io/badge/Status-Live-success)
 ![Node Version](https://img.shields.io/badge/node-%3E%3D16-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-blue)

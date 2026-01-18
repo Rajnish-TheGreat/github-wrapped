@@ -1,7 +1,7 @@
 // Data processing and insights generation
 
 export const processGitHubData = (data) => {
-  const { user, repos, events } = data;
+  const { user, repos, events, totalCommits } = data;
 
   // Language statistics
   const languages = {};
@@ -20,11 +20,15 @@ export const processGitHubData = (data) => {
       percentage: Math.round((count / repos.length) * 100),
     }));
 
-  // Commit statistics from events
+  // Use the totalCommits from API instead of calculating from events
+  // Also fallback to events if API fails
   const pushEvents = events.filter(e => e.type === 'PushEvent');
-  const totalCommits = pushEvents.reduce((sum, event) => {
+  const eventCommits = pushEvents.reduce((sum, event) => {
     return sum + (event.payload?.commits?.length || 0);
   }, 0);
+  
+  // Use the higher value between direct API and events, handle NaN/undefined
+  const finalCommits = Math.max(totalCommits || 0, eventCommits || 0);
 
   // Activity by day of week
   const dayActivity = {
@@ -94,7 +98,7 @@ export const processGitHubData = (data) => {
       totalRepos: publicRepos,
       totalStars,
       totalForks,
-      totalCommits,
+      totalCommits: finalCommits,
       activeDays,
       pullRequests: prEvents.length,
       issues: issueEvents.length,
@@ -110,7 +114,7 @@ export const processGitHubData = (data) => {
       } : null,
       dayActivity,
     },
-    personality: generatePersonality(topLanguages, eventTypes, totalCommits),
+    personality: generatePersonality(topLanguages, eventTypes, finalCommits),
   };
 };
 

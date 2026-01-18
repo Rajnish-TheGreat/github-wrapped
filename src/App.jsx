@@ -99,8 +99,8 @@ function App() {
 
   if (wrappedData) {
     return (
-      <div className="relative w-full h-screen overflow-hidden bg-gray-900">
-        <div id="wrapped-slide" className="w-full h-full">
+      <div className="relative w-full min-h-screen bg-gray-900">
+        <div id="wrapped-slide" className="w-full min-h-screen">
           <AnimatePresence mode="wait">
             {slides[currentSlide]}
           </AnimatePresence>

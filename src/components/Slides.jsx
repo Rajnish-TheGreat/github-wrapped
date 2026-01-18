@@ -6,7 +6,7 @@ export const SlideIntro = ({ user }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-screen flex items-center justify-center gradient-purple-pink p-8"
+      className="min-h-screen flex items-center justify-center gradient-purple-pink p-8 overflow-auto"
     >
       <div className="text-center text-white">
         <motion.img
@@ -52,7 +52,7 @@ export const SlideStats = ({ stats }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-screen flex items-center justify-center gradient-blue-purple p-8"
+      className="min-h-screen flex items-center justify-center gradient-blue-purple p-8 py-20 overflow-auto"
     >
       <div className="max-w-4xl w-full">
         <motion.h2
@@ -96,7 +96,7 @@ export const SlideLanguages = ({ languages }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-screen flex items-center justify-center gradient-green-blue p-8"
+      className="min-h-screen flex items-center justify-center gradient-green-blue p-8 py-20 overflow-auto"
     >
       <div className="max-w-3xl w-full">
         <motion.h2
@@ -145,7 +145,7 @@ export const SlideActivity = ({ insights }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-screen flex items-center justify-center gradient-orange-pink p-8"
+      className="min-h-screen flex items-center justify-center gradient-orange-pink p-8 py-20 overflow-auto"
     >
       <div className="max-w-4xl w-full text-center">
         <motion.h2
@@ -195,7 +195,7 @@ export const SlidePersonality = ({ personality, user }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="h-screen flex items-center justify-center gradient-purple-pink p-8"
+      className="min-h-screen flex items-center justify-center gradient-purple-pink p-8 py-20 overflow-auto"
     >
       <div className="max-w-3xl w-full text-center">
         <motion.h2
